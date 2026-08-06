@@ -29,7 +29,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
     name: "Swadesh Shivam",
-    title: "Swadesh Shivam | Video Editor & Filmmaker",
+    title: "Swadesh Shivam's Portfolio",
     subtitle: "Video Editor & Filmmaker",
     description: "Portfolio of Swadesh Shivam - Video Editor & Filmmaker specializing in cinematic stories and high-impact visual content.",
     contact: {
