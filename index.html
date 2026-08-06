@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu | Video Editor & Visual Creator</title>
+    <title>Swadesh Shivam | Video Editor & Filmmaker</title>
     <meta name="description"
-        content="Portfolio of Himanshu - Video Editor & Visual Creator specializing in cinematic stories and high-impact content.">
+        content="Portfolio of Swadesh Shivam - Video Editor & Filmmaker specializing in cinematic stories and high-impact visual content.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +24,12 @@
         <div class="nav-container">
             <div class="nav-left-group">
                 <a href="#hero" class="logo">
-                    <span class="logo-text">Himanshu's Portfolio</span>
+                    <span class="logo-text">Swadesh Shivam</span>
+                    <span class="logo-subtitle" id="logo-subtitle">Video Editor & Filmmaker</span>
                     <span class="logo-dots">
                         <span class="dot orange"></span>
                         <span class="dot cyan"></span>
                     </span>
-                </a>
-                <a href="tel:+919667341764" class="nav-phone">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+91 9667341764</span>
                 </a>
             </div>
             <nav class="nav-links" id="nav-links">
@@ -49,47 +46,47 @@
         </div>
     </header>
 
-    <!-- Hero Section with Narendar_img.png Background -->
+    <!-- Hero Section -->
     <section class="hero-section" id="hero">
         <div class="hero-bg-container">
-            <img src="./assets/himanshu-landing-page.png" alt="Portfolio Hero Image" class="hero-bg-image">
+            <img src="./assets/himanshu-landing-page.png" alt="Swadesh Shivam Hero Image" class="hero-bg-image" loading="eager">
             <div class="hero-bg-name-wrapper">
-                <span class="bg-name-himanshu">HIMANSHU</span>
-                <span class="bg-name-kumar">KUMAR</span>
+                <span class="bg-name-first">SWADESH</span>
+                <span class="bg-name-last">SHIVAM</span>
             </div>
             <div class="hero-overlay-left"></div>
             <div class="hero-overlay-bottom"></div>
             <div class="hero-ambient-red"></div>
             <div class="hero-ambient-crimson"></div>
+            <div class="film-grain"></div>
         </div>
 
         <div class="hero-content container">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Available for New Projects
+                <span id="hero-badge-text">Available for Freelance Projects</span>
             </div>
-            <h1 class="hero-headline-big">
+            <h1 class="hero-headline-big" id="hero-headline">
                 <span class="text-sand">I DON'T JUST</span><br>
                 <span class="text-sand">EDIT </span><span class="text-black">VIDEOS.</span><br>
-                <span class="text-sand">I CREATE</span><br>
-                <span class="text-black">EXPERIENCES.</span>
+                <span class="text-sand">I BUILD STORIES</span><br>
+                <span class="text-black">PEOPLE REMEMBER.</span>
             </h1>
-            <p class="hero-description-cinematic">
-                I transform raw footage into cinematic stories that captivate audiences, grow brands, and leave a
-                lasting impression — frame by frame.
+            <p class="hero-description-cinematic" id="hero-description">
+                Helping creators, brands and businesses transform raw footage into cinematic experiences that increase engagement and leave lasting impact.
             </p>
 
             <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View Projects</span>
+                <a href="#projects" class="btn btn-primary" id="hero-primary-btn">
+                    <span>View Portfolio</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Contact Me</span>
+                <a href="#contact" class="btn btn-secondary" id="hero-secondary-btn">
+                    <span>Let's Work Together</span>
                 </a>
             </div>
 
-            <div class="hero-stats">
+            <div class="hero-stats" id="hero-stats-container">
                 <div class="stat-item">
                     <span class="stat-number" data-target="2">2+</span>
                     <span class="stat-label">Years Experience</span>
@@ -101,8 +98,13 @@
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="100">100%</span>
-                    <span class="stat-label">Client Satisfaction</span>
+                    <span class="stat-number" data-target="50">50+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">10M+</span>
+                    <span class="stat-label">Views Generated</span>
                 </div>
             </div>
         </div>
@@ -948,7 +950,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Himanshu. All rights reserved.</p>
+            <p>&copy; 2026 Swadesh Shivam. All rights reserved.</p>
         </div>
     </footer>
 
@@ -959,7 +961,7 @@
 
     <!-- EmailJS SDK v4 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
