@@ -1,10 +1,12 @@
 import { heroData } from './data/hero';
 import { siteConfig } from './data/site';
+import { aboutData } from './data/about';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Populate Hero Section from hero.ts & site.ts
+    // Populate Hero Section & Site Branding & About Section from data layer
     renderHeroSection();
     renderSiteBranding();
+    renderAboutSection();
 
     // UI Interactive Logic
     initNavigation();
@@ -12,6 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initReviewsCarousel();
     initContactForm();
 });
+
+function renderAboutSection(): void {
+    const headlineEl = document.getElementById('about-headline');
+    if (headlineEl) {
+        headlineEl.innerHTML = `
+            <span class="text-sand">${aboutData.headline.line1}</span><br>
+            <span class="text-black">${aboutData.headline.line2}</span>
+        `;
+    }
+
+    const paragraphsEl = document.getElementById('about-paragraphs');
+    if (paragraphsEl && aboutData.paragraphs) {
+        paragraphsEl.innerHTML = aboutData.paragraphs.map(p => `
+            <p class="about-text-p">${p}</p>
+        `).join('');
+    }
+
+    const imgEl = document.getElementById('about-portrait-img') as HTMLImageElement | null;
+    if (imgEl) {
+        imgEl.src = aboutData.image;
+        imgEl.alt = aboutData.imageAlt;
+    }
+}
 
 function renderHeroSection(): void {
     const badgeEl = document.getElementById('hero-badge-text');

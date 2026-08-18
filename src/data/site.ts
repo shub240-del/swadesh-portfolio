@@ -33,24 +33,19 @@ export const siteConfig: SiteConfig = {
     subtitle: "Video Editor & Writer",
     description: "Portfolio of Swadesh Shivam - Video Editor & Writer specializing in cinematic stories and high-impact visual content.",
     contact: {
-        email: "swadeshshivam@example.com",
-        location: "Available Worldwide / Remote",
+        email: "solotalksstory@gmail.com",
+        location: "Patna, Bihar",
         availability: "Open for Freelance & Full-time",
         socials: [
             {
-                platform: "LinkedIn",
-                url: "#contact",
-                iconClass: "fa-brands fa-linkedin-in"
-            },
-            {
-                platform: "X",
-                url: "#contact",
-                iconClass: "fa-brands fa-x-twitter"
-            },
-            {
                 platform: "Instagram",
-                url: "https://www.instagram.com/",
+                url: "https://www.instagram.com/swadesh.x?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
                 iconClass: "fa-brands fa-instagram"
+            },
+            {
+                platform: "YouTube",
+                url: "https://www.youtube.com/@swadesh.x",
+                iconClass: "fa-brands fa-youtube"
             }
         ]
     },
@@ -58,30 +53,16 @@ export const siteConfig: SiteConfig = {
         {
             id: "years-exp",
             label: "Years Experience",
-            value: "2+",
-            targetNumber: 2,
+            value: "4+",
+            targetNumber: 4,
             suffix: "+"
         },
         {
             id: "projects-completed",
             label: "Projects Completed",
-            value: "99+",
-            targetNumber: 99,
+            value: "2000+",
+            targetNumber: 2000,
             suffix: "+"
-        },
-        {
-            id: "happy-clients",
-            label: "Happy Clients",
-            value: "50+",
-            targetNumber: 50,
-            suffix: "+"
-        },
-        {
-            id: "views-generated",
-            label: "Views Generated",
-            value: "10M+",
-            targetNumber: 10,
-            suffix: "M+"
         }
     ]
 };

@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             emailjs.send('service_hrw5veq', 'template_935e2od', templateParams)
                 .then(() => {
                     formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Message sent successfully! Himanshu will get back to you soon.';
+                    formStatus.textContent = 'Message sent successfully! Swadesh Shivam will get back to you soon.';
                     contactForm.reset();
                 })
                 .catch((error) => {

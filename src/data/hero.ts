@@ -35,7 +35,7 @@ export const heroData: HeroData = {
         text: "Let's Work Together",
         href: "#contact"
     },
-    heroImage: "./assets/himanshu-landing-page.png",
+    heroImage: "./assets/swadesh-landing-page.png",
     watermarkText: {
         firstName: "SWADESH",
         lastName: "SHIVAM"

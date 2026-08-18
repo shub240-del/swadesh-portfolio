@@ -1,6 +1,6 @@
-# Himanshu Kumar — Video Editor & Visual Creator Portfolio
+# Swadesh Shivam — Video Editor & Filmmaker Portfolio
 
-A premium, cinematic, responsive web portfolio built for **Himanshu Kumar**, a professional Video Editor and Visual Creator based in Noida, India. Designed with rich glassmorphism aesthetics, dynamic video marquees, 3D fanned card stacks, client stories, and smooth animations.
+A premium, cinematic, responsive web portfolio built for **Swadesh Shivam**, a professional Video Editor & Filmmaker based in Patna, Bihar. Designed with rich glassmorphism aesthetics, dynamic video marquees, 3D fanned card stacks, client stories, and smooth animations.
 
 ---
 
@@ -21,12 +21,12 @@ A premium, cinematic, responsive web portfolio built for **Himanshu Kumar**, a p
 ## 📁 Folder & File Structure
 
 ```text
-Narendra Portfolio/
+Swadesh Shivam Portfolio/
 ├── assets/                                  # Media Assets Directory
 │   ├── 208372_medium.mp4                    # Access Denied background video
 │   ├── 42890-432450896_medium.mp4           # Showcase reel video
-│   ├── Himanshu's Landing page.png          # Hero background banner
-│   ├── Himanshu_Front.png                   # About Me portrait image
+│   ├── swadesh-landing-page.png             # Hero background banner
+│   ├── swadesh-front.jpg                    # About Me portrait image
 │   ├── ai inspector 2.JPG.jpeg              # Client Review Avatar (Rachit Singh)
 │   ├── Screenshot 2026-08-04 215513.png     # Client Review Avatar (Elias Antonio Marcella)
 │   ├── Screenshot 2026-08-04 215719.png     # Client Review Avatar (Lim Siew Lan)
@@ -59,7 +59,7 @@ Narendra Portfolio/
 
 ### Using Python HTTP Server
 
-1. Open a terminal / command prompt in the project root directory (`Narendra Portfolio`).
+1. Open a terminal / command prompt in the project root directory (`Swadesh Shivam Portfolio`).
 2. Run the local development server:
    ```bash
    python -m http.server 8000
@@ -78,4 +78,4 @@ Narendra Portfolio/
 
 ## 📄 License & Attribution
 
-© 2026 **Himanshu Kumar**. All rights reserved. Designed & developed for professional video editing and visual creation showcases.
+© 2026 **Swadesh Shivam**. All rights reserved. Designed & developed for professional video editing and visual creation showcases.
