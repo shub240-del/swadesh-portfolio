@@ -1656,13 +1656,13 @@ a {
     background: rgba(120, 10, 19, 0.25);
     border: 1px solid rgba(244, 228, 208, 0.15);
     border-radius: 20px;
-    padding: 32px 28px;
+    padding: 28px 26px;
     backdrop-filter: blur(12px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .review-card:hover {
@@ -1677,15 +1677,15 @@ a {
     color: #f4e4d0;
     /* Sand color stars */
     font-size: 0.95rem;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .review-text {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.98rem;
     line-height: 1.65;
     color: rgba(244, 228, 208, 0.9);
-    margin-bottom: 28px;
+    margin-bottom: 0;
     flex-grow: 1;
 }
 

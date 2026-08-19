@@ -25,9 +25,6 @@ pot.folio/
 ├── assets/                                  # Media & Photo Assets
 │   ├── swadesh-landing-page.png             # Hero background banner
 │   ├── swadesh-about.jpg                    # About Me portrait image
-│   ├── rachit-singh-avatar.jpg              # Client Review Avatar (Compressed)
-│   ├── elias-marcella-avatar.jpg            # Client Review Avatar (Compressed)
-│   ├── lim-siew-lan-avatar.jpg              # Client Review Avatar (Compressed)
 │   ├── youtube.jpg                          # Services Card Preview
 │   ├── short-form-video-trends.jpg          # Services Card Preview
 │   ├── podcast.jpg                          # Services Card Preview
