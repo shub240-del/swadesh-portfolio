@@ -13,7 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatsCounter();
     initReviewsCarousel();
     initContactForm();
+    initImageFallbackHandlers();
 });
+
+function initImageFallbackHandlers(): void {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', () => {
+            console.warn(`[Asset Error] Image failed to load: ${img.src}`);
+            img.style.display = 'none';
+            const parent = img.parentElement;
+            if (parent && !parent.querySelector('.img-fallback-box')) {
+                const fallback = document.createElement('div');
+                fallback.className = 'img-fallback-box';
+                fallback.style.cssText = 'width:100%;height:100%;min-height:160px;display:flex;align-items:center;justify-content:center;background:rgba(120,10,19,0.4);border:1px solid rgba(244,228,208,0.2);border-radius:16px;color:#f4e4d0;font-family:sans-serif;font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;';
+                fallback.innerText = 'Swadesh Shivam Portfolio';
+                parent.appendChild(fallback);
+            }
+        });
+    });
+}
 
 function renderAboutSection(): void {
     const headlineEl = document.getElementById('about-headline');

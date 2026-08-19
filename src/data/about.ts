@@ -21,6 +21,6 @@ export const aboutData: AboutData = {
         "For me, editing isn't just about cutting clips together. It's about understanding the story, finding the right rhythm, and making every frame serve a purpose.",
         "Whether it's short-form content, YouTube videos, brand content, or cinematic projects, my goal is simple: create work that feels intentional, keeps people watching, and communicates the creator's vision clearly."
     ],
-    image: "./assets/swadesh-about.jpg",
-    imageAlt: "Swadesh Shivam"
+    image: "/images/about/swadesh-about.jpg",
+    imageAlt: "Swadesh Shivam — Video Editor and Writer"
 };
