@@ -3,7 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1280, initial-scale=1, minimum-scale=0.1, maximum-scale=5.0, user-scalable=yes">
+    <script>
+        (function() {
+            function scaleDesktopCanvas() {
+                var meta = document.querySelector('meta[name="viewport"]');
+                var screenW = window.screen.width;
+                if (screenW && screenW < 1280) {
+                    var scale = screenW / 1280;
+                    meta.setAttribute('content', 'width=1280, initial-scale=' + scale + ', minimum-scale=' + (scale * 0.5) + ', maximum-scale=5.0, user-scalable=yes');
+                } else {
+                    meta.setAttribute('content', 'width=1280, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+                }
+            }
+            scaleDesktopCanvas();
+            window.addEventListener('resize', scaleDesktopCanvas);
+            window.addEventListener('orientationchange', function() {
+                setTimeout(scaleDesktopCanvas, 150);
+            });
+        })();
+    </script>
     <title>Swadesh Shivam's Portfolio</title>
     <meta name="description"
         content="Portfolio of Swadesh Shivam - Video Editor & Writer specializing in cinematic stories and high-impact visual content.">

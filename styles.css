@@ -2001,137 +2001,40 @@ a {
     background: #ff7038;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 3rem;
-    }
+/* ============================================================
+   LOCKED DESKTOP CANVAS ARCHITECTURE
+   Preserves the exact desktop design composition across all screens
+   ============================================================ */
 
-    .hero-subtitle {
-        font-size: 1.8rem;
-    }
-
-    .hero-overlay-left {
-        width: 100%;
-        background: linear-gradient(to right, rgba(9, 8, 12, 0.95) 0%, rgba(9, 8, 12, 0.8) 60%, rgba(9, 8, 12, 0.5) 100%);
-    }
-
-    .about-grid,
-    .skills-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
+/* Lock container and body dimensions for unified desktop canvas */
+.container,
+.nav-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(9, 8, 12, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        align-items: center;
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .video-marquee-container {
+        mask-image: none;
+        -webkit-mask-image: none;
+        overflow-x: auto;
+    }
+    .video-marquee-track {
+        animation: none !important;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .nav-cta {
-        display: none;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.4rem;
-    }
-
-    .hero-bg-image {
-        object-position: 70% 20%;
-        opacity: 0.65;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-stats {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
         width: 100%;
     }
-
-    .stat-divider {
-        width: 100%;
-        height: 1px;
+    .badge-dot, .wheel, .coming-soon-badge {
+        animation: none;
     }
-
-    .about-highlights-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .about-bg-title,
-    .showreel-bg-title,
-    .work-bg-title,
-    .reviews-bg-title,
-    .contact-bg-title,
-    .contact-transparent-title {
-        font-size: 4.5rem;
-    }
-
-    .contact-big-title {
-        font-size: 4.5rem;
-    }
-
-    .contact-overlap-title {
-        font-size: 2.2rem;
-        margin-top: -28px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .about-bg-title,
-    .showreel-bg-title,
-    .work-bg-title,
-    .reviews-bg-title,
-    .contact-bg-title,
-    .contact-transparent-title {
-        font-size: 2.8rem;
-        white-space: normal;
-    }
-
-    .contact-big-title {
-        font-size: 2.8rem;
-        white-space: normal;
-    }
-
-    .contact-overlap-title {
-        font-size: 1.6rem;
-        margin-top: -18px;
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
