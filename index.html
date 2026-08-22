@@ -189,17 +189,6 @@
 
                 <div class="showreel-wrapper glass-card">
                     <div class="showreel-video-container" id="showreel-container">
-                        <!-- Custom Cinematic Play Overlay (Active Before Play) -->
-                        <div class="showreel-play-overlay" id="showreel-play-overlay" role="button" aria-label="Play Showreel Video" tabindex="0">
-                            <div class="showreel-play-content">
-                                <div class="showreel-play-badge">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <h3 class="showreel-overlay-title">WATCH SHOWREEL</h3>
-                                <p class="showreel-overlay-sub">SWADESH SHIVAM &bull; 3 MIN</p>
-                            </div>
-                        </div>
-
                         <!-- Native HTML5 Video Element -->
                         <video
                             id="showreel-video"
@@ -207,17 +196,12 @@
                             controls
                             playsinline
                             webkit-playsinline
-                            preload="metadata"
+                            preload="auto"
                             src="/videos/showreel.mp4"
                         >
+                            <source src="/videos/showreel.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-
-                        <!-- Graceful Fallback (Shown on error) -->
-                        <div class="showreel-fallback" id="showreel-fallback" style="display: none;">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <p>Showreel temporarily unavailable — please try again.</p>
-                        </div>
                     </div>
                 </div>
             </div>
