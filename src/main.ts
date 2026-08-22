@@ -1,6 +1,7 @@
 import { heroData } from './data/hero';
 import { siteConfig } from './data/site';
 import { aboutData } from './data/about';
+import { showreelConfig } from './data/showreel';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Populate Hero Section & Site Branding & About Section from data layer
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // UI Interactive Logic
     initNavigation();
+    initShowreel();
     initStatsCounter();
     initReviewsCarousel();
     initContactForm();
@@ -325,3 +327,52 @@ function initContactForm(): void {
         }, 1000);
     });
 }
+
+function initShowreel(): void {
+    const video = document.getElementById('showreel-video') as HTMLVideoElement | null;
+    const playOverlay = document.getElementById('showreel-play-overlay');
+    const fallback = document.getElementById('showreel-fallback');
+
+    if (!video) return;
+
+    if (showreelConfig.videoUrl) {
+        video.src = showreelConfig.videoUrl;
+    }
+    if (showreelConfig.posterUrl) {
+        video.poster = showreelConfig.posterUrl;
+    }
+
+    if (playOverlay) {
+        const startPlayback = () => {
+            playOverlay.classList.add('hidden');
+            video.play().catch(err => {
+                console.warn('[Showreel Playback Info]', err);
+            });
+        };
+
+        playOverlay.addEventListener('click', startPlayback);
+        playOverlay.addEventListener('keydown', (e: KeyboardEvent) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                startPlayback();
+            }
+        });
+    }
+
+    video.addEventListener('play', () => {
+        if (playOverlay) {
+            playOverlay.classList.add('hidden');
+        }
+    });
+
+    video.addEventListener('error', () => {
+        console.warn('[Showreel Error] Video failed to load.');
+        if (fallback) {
+            fallback.style.display = 'flex';
+        }
+        if (playOverlay) {
+            playOverlay.style.display = 'none';
+        }
+    });
+}
+

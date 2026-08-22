@@ -921,32 +921,30 @@ a {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    min-height: 480px;
+    height: auto;
     overflow: hidden;
     border-radius: 16px;
     background-color: #000000;
 }
 
-.showreel-video-container iframe,
-.showreel-video-container video,
 .showreel-video-player {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000000;
     border: none;
     border-radius: 16px;
     outline: none;
+    z-index: 2;
 }
 
-.showreel-coming-soon-container {
+/* Custom Cinematic Play Overlay */
+.showreel-play-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -954,13 +952,21 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, rgba(140, 15, 25, 0.75) 0%, rgba(12, 2, 4, 0.96) 80%);
+    background: radial-gradient(circle at center, rgba(140, 15, 25, 0.75) 0%, rgba(12, 2, 4, 0.92) 80%);
     border-radius: 16px;
     box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.85), inset 0 0 30px rgba(230, 57, 70, 0.25);
-    z-index: 5;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-.coming-soon-content {
+.showreel-play-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.showreel-play-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -969,24 +975,32 @@ a {
     padding: 30px 20px;
     width: 100%;
     margin: auto;
-    z-index: 6;
+    z-index: 11;
 }
 
-.coming-soon-badge {
-    width: 105px;
-    height: 105px;
+.showreel-play-badge {
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
-    background: rgba(230, 57, 70, 0.08);
-    border: 2px solid rgba(244, 228, 208, 0.25);
+    background: rgba(230, 57, 70, 0.15);
+    border: 2px solid rgba(244, 228, 208, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.4rem;
-    color: transparent;
-    -webkit-text-stroke: 1.8px rgba(244, 228, 208, 0.45);
-    margin-bottom: 24px;
-    box-shadow: 0 0 40px rgba(230, 57, 70, 0.35);
+    font-size: 2.2rem;
+    color: #f4e4d0;
+    padding-left: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 40px rgba(230, 57, 70, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.showreel-play-overlay:hover .showreel-play-badge {
+    transform: scale(1.1);
+    background: rgba(230, 57, 70, 0.35);
+    box-shadow: 0 0 55px rgba(230, 57, 70, 0.75);
+    border-color: #f4e4d0;
 }
 
 @keyframes pulseGlow {
@@ -1000,27 +1014,49 @@ a {
     }
 }
 
-.coming-soon-title {
+.showreel-overlay-title {
     font-family: var(--font-heading);
-    font-size: 5.2rem;
+    font-size: clamp(2rem, 4.5vw, 4.2rem);
     font-weight: 900;
-    letter-spacing: 12px;
+    letter-spacing: 8px;
     text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(244, 228, 208, 0.4);
-    text-shadow: 0 0 35px rgba(244, 228, 208, 0.15);
-    margin: 0;
+    color: #f4e4d0;
+    margin: 0 0 8px 0;
     line-height: 1.1;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
 }
 
-.coming-soon-sub {
-    font-size: 1.5rem;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(244, 228, 208, 0.35);
-    letter-spacing: 5px;
+.showreel-overlay-sub {
+    font-size: clamp(0.85rem, 2vw, 1.25rem);
+    color: #f4e4d0;
+    opacity: 0.85;
+    letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: 600;
-    text-shadow: 0 0 20px rgba(244, 228, 208, 0.1);
+    margin: 0;
+}
+
+.showreel-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: rgba(18, 3, 6, 0.95);
+    color: #f4e4d0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    z-index: 15;
+    border-radius: 16px;
+    text-align: center;
+    padding: 24px;
+}
+
+.showreel-fallback i {
+    font-size: 2rem;
+    color: var(--orange-primary);
 }
 
 .highlight-card {
