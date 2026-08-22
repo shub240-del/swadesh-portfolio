@@ -2,7 +2,10 @@ export interface HeroData {
     badge: string;
     headline: {
         line1: string;
-        line2: string;
+        line2sand: string;
+        line2black: string;
+        line3: string;
+        line4: string;
     };
     subheadline: string;
     primaryButton: {
@@ -23,8 +26,11 @@ export interface HeroData {
 export const heroData: HeroData = {
     badge: "Available for Freelance Projects",
     headline: {
-        line1: "I DON'T JUST EDIT VIDEOS.",
-        line2: "I BUILD STORIES PEOPLE REMEMBER."
+        line1: "I DON'T JUST",
+        line2sand: "EDIT ",
+        line2black: "VIDEOS.",
+        line3: "I BUILD STORIES",
+        line4: "PEOPLE REMEMBER."
     },
     subheadline: "Helping creators, brands and businesses transform raw footage into cinematic experiences that increase engagement and leave lasting impact.",
     primaryButton: {

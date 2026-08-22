@@ -67,7 +67,9 @@ function renderHeroSection(): void {
     if (headlineEl) {
         headlineEl.innerHTML = `
             <span class="text-sand">${heroData.headline.line1}</span><br>
-            <span class="text-black">${heroData.headline.line2}</span>
+            <span class="text-sand">${heroData.headline.line2sand}</span><span class="text-black">${heroData.headline.line2black}</span><br>
+            <span class="text-sand">${heroData.headline.line3}</span><br>
+            <span class="text-black">${heroData.headline.line4}</span>
         `;
     }
 
